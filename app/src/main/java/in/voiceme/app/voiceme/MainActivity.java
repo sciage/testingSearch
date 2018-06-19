@@ -33,7 +33,7 @@ import android.view.View;
  * Created by RacZo on 2/19/17.
  */
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,
+        implements
         AutocompleteDemoFragment.OnFragmentInteractionListener{
 
     private static final String TAG = MainActivity.class.getName();
@@ -49,38 +49,12 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
 
         fragmentTag = FRAGMENT_DEMO;
         fragment = AutocompleteDemoFragment
                 .newInstance("FRAGMENT 1 PARAM 1");
         switchFragment(fragment, fragmentTag);
 
-    }
-
-
-
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_home) {
-
-            fragmentTag = FRAGMENT_DEMO;
-            fragment = getSupportFragmentManager().findFragmentByTag(fragmentTag);
-            if (fragment == null) {
-                fragment = AutocompleteDemoFragment
-                        .newInstance("FRAGMENT 1 PARAM 1");
-            }
-
-        }
-        return true;
     }
 
     @Override
