@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SmartyStreets Autocomplete Demo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_other">Other</string>
+
+    <string name="hint_address">Address</string>
+    <string name="hint_completion">Number Address, City State</string>
+
+    <string name="label_author">Follow me on Twitter</string>
+    <string name="label_twitter">\@OscarSalguero</string>
+    <string name="label_selection">You\'ve selected: %s</string>
+    <string name="label_selection_none">No Selection</string>
+
+    <string name="ss_ref">https://oscarsalguero.com</string>
+    <string name="ss_web_key">20474737927292445</string>
+
+    <string name="rationale_other_fragment">Wondering why did I made this demo app with a Navigation Drawer and Fragments?\n\nWell, I wanted to test if the dropdown from the AutoCompleteTextView behavior with the drawer\'s view and be sure it would not have any issues with it or with other Fragment.</string>
+
+</resources>

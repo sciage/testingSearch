@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="ss_suggestions">3</integer>
+
+    <integer name="max_length_autocomplete">150</integer>
+
+</resources>
