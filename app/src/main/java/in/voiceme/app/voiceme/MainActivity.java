@@ -34,14 +34,12 @@ import android.view.View;
  */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        AutocompleteDemoFragment.OnFragmentInteractionListener,
-        OtherFragment.OnFragmentInteractionListener {
+        AutocompleteDemoFragment.OnFragmentInteractionListener{
 
     private static final String TAG = MainActivity.class.getName();
 
 
     private static final String FRAGMENT_DEMO = "FRAGMENT_DEMO";
-    private static final String FRAGMENT_OTHER = "FRAGMENT_OTHER";
 
     private Fragment fragment;
     private String fragmentTag;
@@ -63,6 +61,8 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -79,22 +79,7 @@ public class MainActivity extends AppCompatActivity
                         .newInstance("FRAGMENT 1 PARAM 1");
             }
 
-        } else if (id == R.id.nav_other) {
-
-            fragmentTag = FRAGMENT_OTHER;
-            fragment = getSupportFragmentManager().findFragmentByTag(fragmentTag);
-            if (fragment == null) {
-                fragment = OtherFragment
-                        .newInstance("FRAGMENT 2 PARAM 1", "FRAGMENT 2 PARAM 2");
-            }
-
         }
-
-        // Insert the fragment by replacing any existing fragment
-        switchFragment(fragment,fragmentTag);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
